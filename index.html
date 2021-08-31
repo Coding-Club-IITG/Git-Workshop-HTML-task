@@ -53,7 +53,41 @@
         * {
             box-sizing: border-box;
         }
+html {
+  height:100%;
+}
 
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
         body {
 		
 	    font-family: 'Quicksand';
@@ -71,11 +105,7 @@
   	font-display: swap;
 	} */
 
-        .dark {
-            background-color: #071e3d;
-            background-image: none !important;
-            color: #fff;
-        }
+        
 
         a,
         a:hover {
@@ -93,13 +123,13 @@
         }
 
         a:hover {
-            background: #1994e7;
+            background-color: cornflowerblue;
         }
 
         .infolink {
             display: inline-block;
-
-            margin: 2px;
+            background-color: green;
+            margin: 0.2px;
         }
 
         .icon {
@@ -129,11 +159,7 @@
 
             display: flex;
 
-            background-image: linear-gradient(-20deg, #ff2846 0%, #6944ff 100%);
 
-            display: flex;
-
-            background-image: linear-gradient(-20deg, #ff2846 0%, #6944ff 100%);
         }
 
         @media screen and (max-width: 768px) {
@@ -563,23 +589,15 @@
             transition: all 0.3s;
         }
 
-        .switcherMood {
-            border: none;
-            position: absolute;
-            top: 30px;
-            right: 40px;
-            background: #c4c4c4;
-            padding: 0.4em;
-            color: #fff;
-            font-size: 25px;
-            border-radius: 15px;
-            cursor: pointer;
-        }
+
     </style></head>
 
     
 
     <body>
+        <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
         <div class="wrapper">
             <div class="profile-card js-profile-card">
                 <div class="profile-card__img">
@@ -589,15 +607,13 @@
                 <div class="profile-card__cnt js-profile-cnt">
                     <div class="profile-card__name">Shrishti Singh</div>
 
-                    <div class="profile-card__txt"><strong>Indian • 18 Years Old • Student •ML/AI & Computer Vision Enthusiast</strong></div>
+                    <div class="profile-card__txt"><strong>Indian • 18 Years Old • Student •Interested in ML, Data-Structures and Competitive Coding</strong></div>
                     <div class="profile-card-inf">
-                        <p>Hello! I am Shrishti Singh. I'm a 18 year old Indian developer.</p>
-			    <p>I am a student at IIT GUWAHATI</p>
-                        <p>I am a 2nd year B.tech student. I love all aspects of technology; especially Computer Vision, and managing <a class="infolink">servers</a></p>
-                        <p>I have worked on some projects like <a class="infolink">Image to caption </a> using Machine Learning and <a target="_blank" class="infolink">Coursera Reviews based Sentiment Analysis</a> with Machine Learning Based Approach.</p>
+                        <p>Hello! I am Mahesh Tripathi. I'm a 18 years old Indian developer.</p>
+			    <p>I am a student at IIT Guwahati</p>
+                        <p>I am an sophomore at IIT Guwahati.I like reading books and having my paintbrust everytime with me.  I love all aspects of technology; especially Computer Vision, and managing <a class="infolink">Servers</a></p>
+                        <p>I have worked on some projects like <a class="infolink">Caption to Image</a> using Machine Learning and <a target="_blank" class="infolink">Coursera Reviews based Sentiment Analysis</a> with Machine Learning Based Approach.</p>
 			<p>I love handling servers and testing new scripts, contact me if you need help ;)</p>
-                        <p>
-                            Currently have 1 VPS from <a href="https://nanokvm.net" target="_blank" class="infolink">NanoKVM</a></p>
                         <p>I play Rocket League, Minecraft &amp; some other <a class="infolink">games</a> on my <a class="infolink">Lappy</a> sometimes in my free time.</p>
                     </div>
                     <div class="profile-card-social">
@@ -632,31 +648,15 @@
                             </span>
                         </a>
                     </div>
-                        <img src="https://s11.flagcounter.com/count2/BLsT/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></br></br>
+                        <img src="https://s11.flagcounter.com/count2/BLsT/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">
 			
                 </div>
 
-                <button class="switcherMood"><i class="fas fa-moon"></i></button>
+               
             </div>
         </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<!-- NightMode -->
-<script type="text/javascript">
-        $(function () {
-            $(".switcherMood").on("click", function () {
-                if (!$(".wrapper").hasClass("dark")) {
-                    $(".wrapper").addClass("dark");
-                    $(".profile-card").css("background", "#09192e");
-                    $(".switcherMood i").attr("class", "fas fa-sun");
-                } else {
-                    $(".wrapper").removeClass("dark");
-                    $(".profile-card").css("background", "#ffff");
-                    $(".switcherMood i").attr("class", "fas fa-moon");
-                }
-            });
-        });
-    </script>
 
 <!-- Cloudflare Web Analytics -->
 <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;717e095309084bee9f821eb9c9444bae&quot;}">
