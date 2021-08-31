@@ -53,7 +53,29 @@
         * {
             box-sizing: border-box;
         }
+        body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+html {
+  height:100%;
+}
+        
         body {
 		
 	    font-family: 'Quicksand';
@@ -71,11 +93,7 @@
   	font-display: swap;
 	} */
 
-        .dark {
-            background-color: #071e3d;
-            background-image: none !important;
-            color: #fff;
-        }
+        
 
         a,
         a:hover {
@@ -93,13 +111,13 @@
         }
 
         a:hover {
-            background: #1994e7;
+            background-color: deeppink;
         }
 
         .infolink {
             display: inline-block;
-
-            margin: 2px;
+            background-color: deepskyblue;
+            margin: 0.2px;
         }
 
         .icon {
@@ -129,11 +147,7 @@
 
             display: flex;
 
-            background-image: linear-gradient(-20deg, #ff2846 0%, #6944ff 100%);
 
-            display: flex;
-
-            background-image: linear-gradient(-20deg, #ff2846 0%, #6944ff 100%);
         }
 
         @media screen and (max-width: 768px) {
@@ -563,23 +577,15 @@
             transition: all 0.3s;
         }
 
-        .switcherMood {
-            border: none;
-            position: absolute;
-            top: 30px;
-            right: 40px;
-            background: #c4c4c4;
-            padding: 0.4em;
-            color: #fff;
-            font-size: 25px;
-            border-radius: 15px;
-            cursor: pointer;
-        }
+
     </style></head>
 
     
 
     <body>
+        <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
         <div class="wrapper">
             <div class="profile-card js-profile-card">
                 <div class="profile-card__img">
@@ -596,8 +602,6 @@
                         <p>I am currently an second year student at IIT Guwahati pursuing my majors in BIoTechnology. I like writing haikus. I love all aspects of technology; especially Computer Vision, and managing <a class="infolink">Servers</a></p>
                         <p>I have worked on some projects like <a class="infolink">Caption to Image</a> using Machine Learning and <a target="_blank" class="infolink">Coursera Reviews based Sentiment Analysis</a> with Machine Learning Based Approach.</p>
 			<p>I love handling servers and testing new scripts, contact me if you need help ;)</p>
-                        <p>
-                            Currently have 1 VPS from <a href="https://nanokvm.net" target="_blank" class="infolink">NanoKVM</a></p>
                         <p>I play Rocket League, Minecraft &amp; some other <a class="infolink">games</a> on my <a class="infolink">Lappy</a> sometimes in my free time.</p>
                     </div>
                     <div class="profile-card-social">
@@ -632,31 +636,15 @@
                             </span>
                         </a>
                     </div>
-                        <img src="https://s11.flagcounter.com/count2/BLsT/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></br></br>
+                        <img src="https://s11.flagcounter.com/count2/BLsT/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">
 			
                 </div>
 
-                <button class="switcherMood"><i class="fas fa-moon"></i></button>
+               
             </div>
         </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<!-- NightMode -->
-<script type="text/javascript">
-        $(function () {
-            $(".switcherMood").on("click", function () {
-                if (!$(".wrapper").hasClass("dark")) {
-                    $(".wrapper").addClass("dark");
-                    $(".profile-card").css("background", "#09192e");
-                    $(".switcherMood i").attr("class", "fas fa-sun");
-                } else {
-                    $(".wrapper").removeClass("dark");
-                    $(".profile-card").css("background", "#ffff");
-                    $(".switcherMood i").attr("class", "fas fa-moon");
-                }
-            });
-        });
-    </script>
 
 <!-- Cloudflare Web Analytics -->
 <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;717e095309084bee9f821eb9c9444bae&quot;}">
