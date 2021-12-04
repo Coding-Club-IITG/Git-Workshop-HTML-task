@@ -6,6 +6,7 @@
         <title>AboutMe</title>
         <link rel="shortcut icon" href="favicon.ico">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="stylesheet" href="./style.css">
 
         <!-- Meta Tags for Page Related Properties
 	================================================================================ -->
@@ -128,13 +129,17 @@
             padding-top: 100px;
 
             display: flex;
+            background-size: 600% 100% !important;
 
-            background-image: linear-gradient(-20deg, #ff2846 0%, #6944ff 100%);
+            background: linear-gradient(45deg,#F17C58,#E94584,#24AADB,#27DBB1,#FFDC18,#FF3706);
+            animation: gradient 16s linear infinite;
+    animation-direction: alternate;
 
-            display: flex;
-
-            background-image: linear-gradient(-20deg, #ff2846 0%, #6944ff 100%);
         }
+        @keyframes gradient {
+    0% {background-position: 0%}
+    100% {background-position: 100%}
+}
 
         @media screen and (max-width: 768px) {
             .wrapper {
@@ -636,13 +641,13 @@
 			
                 </div>
 
-                <button class="switcherMood"><i class="fas fa-moon"></i></button>
+                <!-- <button class="switcherMood"><i class="fas fa-moon"></i></button> for day night theme --> 
             </div>
         </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- NightMode -->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
         $(function () {
             $(".switcherMood").on("click", function () {
                 if (!$(".wrapper").hasClass("dark")) {
@@ -656,7 +661,7 @@
                 }
             });
         });
-    </script>
+    </script> -->
 
 <!-- Cloudflare Web Analytics -->
 <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;717e095309084bee9f821eb9c9444bae&quot;}">
