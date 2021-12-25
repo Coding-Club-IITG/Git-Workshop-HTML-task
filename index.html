@@ -63,6 +63,32 @@
             margin: 0;
         }
 	
+        body {
+	margin: 0;
+	width: 100%;
+	
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.container {
+	width: 100%;
+	position: absolute;
+	top: 35%;
+	text-align: center;
+}
+
 /* 	@font-face {
   	font-family: 'Pacifico';
 	font-style: normal;
@@ -569,6 +595,7 @@
     
 
     <body>
+        <div class="container">
         <div class="wrapper">
             <div class="profile-card js-profile-card">
                 <div class="profile-card__img">
@@ -651,4 +678,5 @@
 <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;717e095309084bee9f821eb9c9444bae&quot;}">
 </script>
 <!-- End Cloudflare Web Analytics -->
+</div>
 </body></html>
